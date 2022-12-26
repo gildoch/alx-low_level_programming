@@ -17,7 +17,7 @@ int main(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (j = 0; j < 9; j++)
 		{
 			for (x = 0; x < 10; x++)
 			{
@@ -30,12 +30,11 @@ int main(void)
 						putchar(' ');
 						putchar('0' + x);
 						putchar('0' + y);
-
-						if (i + j + x + y != 35)
-						{
-							putchar(',');
-							putchar(' ');
-						}
+					}
+					if (i + j + x + y != 35)
+					{
+						putchar(',');
+						putchar(' ');
 					}
 				}
 			}
