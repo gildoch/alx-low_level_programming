@@ -1,0 +1,23 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:%.c=%.o)
+NAME = school
+RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all: ${OBJ}
+	${CC} ${CFLAGS} ${OBJ} -o ${NAME}
+
+clean:
+	@echo "Cleaning tmps files and executable.."
+	${RM} *~ *.swp $(NAME)
+
+oclean:
+	@echo "Cleaning objects files.."
+	${RM} ${OBJ}
+
+fclean: clean oclean
+	@echo "Cleaning everything.."
+	
+
+re: oclean all
